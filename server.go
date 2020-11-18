@@ -206,7 +206,7 @@ func handleAddr(request []byte) {
 	}
 
 	knownNodes = append(knownNodes, payload.AddrList...)
-	fmt.Printf("There are %d known nodes now!\n", len(knownNodes))
+	fmt.Printf("现在有了%d个已知节点了!\n", len(knownNodes))
 	requestBlocks()
 }
 
@@ -505,7 +505,7 @@ func gobEncode(data interface{}) []byte {
 	return buff.Bytes()
 }
 
-// nodeIsKnown 节点地址是否在遗址节点列表中
+// nodeIsKnown 节点地址是否在已知节点列表中
 func nodeIsKnown(addr string) bool {
 	for _, node := range knownNodes {
 		if node == addr {
