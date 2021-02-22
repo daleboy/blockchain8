@@ -464,7 +464,7 @@ func handleConnection(conn net.Conn, bc *Blockchain) {
 }
 
 // StartServer 启动一个节点
-//minerAddress若是控制，为非挖矿节点，不为空值，为挖矿节点
+//minerAddress若是空值，为非挖矿节点，不为空值，为挖矿节点
 func StartServer(nodeID, minerAddress string) {
 	nodeAddress = fmt.Sprintf("localhost:%s", nodeID)
 	//如果当前是挖矿节点，那么miningAddress的长度不会为空，否则miningAddress是空值
